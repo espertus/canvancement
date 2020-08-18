@@ -11,6 +11,7 @@
   'use strict';
   var assocRegex = new RegExp('^/(course|account)s/([0-9]+)/rubrics$');
   var errors = [];
+  var letters = ["F", "D", "C", "B", "A"];
   var outcomes = [];
   var pendingOutcomes = 0;
   var criteria = [];
@@ -166,7 +167,8 @@
     for (var i = 0; i < n; i++) {
       j = mono < 0 ? i : n - 1 - i;
       ratings.push({
-        'description' : descriptions[j].replace(/\\n/g, ' ').replace(/\s+/g, ' '),
+        'description' : letter[points[j]],
+        'rating_long_description' : descriptions[j].replace(/\\n/g, ' ').replace(/\s+/g, ' '),
         'points' : points[j],
       });
     }
