@@ -167,6 +167,7 @@
       j = mono < 0 ? i : n - 1 - i;
       ratings.push({
         'description' : descriptions[j].replace(/\\n/g, ' ').replace(/\s+/g, ' '),
+        'rating_long_description' : descriptions[j].replace(/\\n/g, ' ').replace(/\s+/g, ' '),
         'points' : points[j],
       });
     }
