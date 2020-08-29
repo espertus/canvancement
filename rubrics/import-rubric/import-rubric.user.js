@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name        Rubric Importer
-// @namespace   https://github.com/jamesjonesmath/canvancement
+// @namespace   https://github.com/espertus/canvancement
 // @description Create a rubric by copying from a spreadsheet and pasting into Canvas
 // @include     https://*.instructure.com/courses/*/rubrics
 // @include     https://*.instructure.com/accounts/*/rubrics
-// @version     5
+// @version     1
 // @grant       none
 // ==/UserScript==
 (function() {
@@ -167,7 +167,7 @@
       j = mono < 0 ? i : n - 1 - i;
       ratings.push({
         'description' : descriptions[j].replace(/\\n/g, ' ').replace(/\s+/g, ' '),
-        'rating_long_description' : descriptions[j].replace(/\\n/g, ' ').replace(/\s+/g, ' '),
+        'rating_long_description' : 'placeholder for long description',
         'points' : points[j],
       });
     }
